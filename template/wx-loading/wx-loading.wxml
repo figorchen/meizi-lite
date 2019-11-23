@@ -1,0 +1,8 @@
+<template name="wx-loading">
+  <view class='wx-loading-change {{wxLoading.show ? "" : "hide"}}' capture-catch:touchmove='loadingViewNoneFun' capture-catch:touchstart="loadingViewNoneFun">
+    <view class="wx-loading-container">
+      <view class="wx-loading-anim"></view>
+      <view class="wx-loading-title">{{wxLoading.text ? wxLoading.text : "正在加载数据"}}</view>
+    </view>
+  </view>
+</template>

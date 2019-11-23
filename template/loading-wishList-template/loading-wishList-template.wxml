@@ -1,0 +1,25 @@
+<import src="/template/wishList-template/wishList-template.wxml"></import>
+<template name="loading-wishList-template">
+  <!-- undefined和LOADING状态下显示加载动画 -->
+  <view wx:if='{{!loadingState || loadingState == "LOADING"}}' class='loadingView-loading' catchtap='loadingViewNoneFun'>
+    <view class='loadingAnimation'>
+      <view style='width:80rpx; height: 80rpx; position:relative'>
+        <view class='loadingCircle'></view>
+      </view>
+    </view>
+  </view>
+  <!-- 无网络页面 -->
+  <view wx:if='{{loadingState == "ERROR"}}' class="noDataView" catchtap='loadingViewNoneFun'>
+    <image wx:if='{{emptyImg != ""}}' class="imgBlank" src='/assets/img/icon_blank03.png'></image>
+    <view class="noOrderText">暂无网络</view> 
+    <view catchtap='onRepeat' class='clickBtn'>点击刷新</view>
+  </view>
+  <!-- 空数据页面 -->
+  <view wx:if='{{loadingState == "EMPTY"}}' class="noDataView-wishList" style='z-index: 9000' catchtap='loadingViewNoneFun'>
+    <image class="imgBlank" src='{{emptyImg?emptyImg:"/assets/img/img_blank01@2x.png"}}'></image>
+    <view class="noOrderText">{{emptyText?emptyText:"暂无数据"}}</view>
+    <view catchtap='emptyPageClick' class='{{clickStyle ? clickStyle : "clickBtn"}} {{clickBtnText?"":"hide"}}'>{{clickBtnText}}</view>
+  <template is="wishList" data="{{servicePhone}}"></template>
+  </view>
+   <!--<view class='loadingView-loading' style='height:50rpx;bottom:0rpx'>{{loadingState ? loadingState: "空空空空空"}}</view>-->
+</template>

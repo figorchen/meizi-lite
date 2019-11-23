@@ -1,0 +1,31 @@
+.wishList{
+  margin-bottom :228rpx;
+}
+.writeWishList{
+  width :519rpx;
+  height :180rpx;
+  font-family: PingFangSC-Regular;
+  color: #999999;
+  letter-spacing: 0;
+  text-align: left;
+}
+.wishListBtn{
+  width :280rpx;
+  height :88rpx;
+  background: #1E9BFF;
+  border-radius: 10rpx;
+  font-family: PingFangSC-Regular;
+  letter-spacing: 0;
+}
+.contactUsText{
+  font-family: PingFangSC-Regular;
+  color: #999999;
+  letter-spacing: 0;
+  width :160rpx;
+}
+.customerService{
+  font-family: PingFangSC-Regular;
+  color: #1E9BFF;
+  letter-spacing: 0;
+  text-decoration: underline;
+}

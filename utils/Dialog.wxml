@@ -1,0 +1,35 @@
+<template name="diaView">
+  <view class="dialog {{ showDialog ? 'dialog_show' : '' }}">
+    <view class="dialog_mask" bindtap="onClickdiaView" />
+    <view class="dialog_container {{isIphoneX ?'fix-iphonex-button-pure':''}}">
+
+      <!--  //此区域自定义视图  -->
+      <view class="flex_Center">
+
+        <view class='sharetitleView'>分享到</view>
+        <view class='shareView'>
+          <view class='share1'>
+          <image class='shareImg' src='/assets/img/btn_share_wechant@2x.png'></image>
+            <button class='shareBtn' open-type='share' plain='true'></button>
+            <text class='wechatfriend'>微信好友</text>
+
+          </view>
+
+          <!-- <view class='share1' bindtap='onShare' open-type="share">
+            <image class='shareImg' src='../../assets/img/btn_share_wechant@2x.png'></image>
+            <text class='wechatfriend'>微信好友</text>
+          </view> -->
+
+          <view class='share2'>
+          </view>
+        </view>
+
+
+        <view class='cancelView' bindtap='cancelShare'>
+          <text class='cancelTitle'>取消</text>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</template>

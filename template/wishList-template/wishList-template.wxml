@@ -1,0 +1,13 @@
+<template name="wishList">
+    <view class="wishList flex-v flex-vc">
+        <view class="writeWishList font-32 mb-50">找不到想要的药品？不要灰心，填写愿望清单，让我们帮你找到它吧！或者直接拨打我们的客服电话，我们会第一时间为您服务！
+        </view>
+        <view class="wishListBtn font-34 color-ffffff flex-h flex-hc flex-vc mb-30" bindtap="toFillWishlist">
+            填写愿望清单
+        </view>
+        <view class='contactUs' bindtap='onCustomerServiceClick'>
+            <text class='contactUsText font-32'>客服电话：</text>
+            <text class='customerService font-32'>{{servicePhone}}</text>
+        </view>
+    </view>
+</template>
